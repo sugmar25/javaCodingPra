@@ -65,11 +65,18 @@ void main() {
     Set<Character> printDuplicateChar = notListString.chars().mapToObj(x->(char)x).sorted().collect(Collectors.toCollection(LinkedHashSet::new));
     printDuplicateChar.forEach(System.out::print);
 
-    //String coding practices
+    //String coding practices for printing duplicate character
     Set<Character> getRepeatedChar2 = new HashSet<>();
     Set<Character> printDuplicateChar2 = notListString.chars().mapToObj(x->(char)x).filter(x->!getRepeatedChar2.add(x)).collect(Collectors.toSet());
     System.out.println(System.lineSeparator());
     printDuplicateChar2.forEach(System.out::print);
+    System.out.println(System.lineSeparator());
+
+    //print duplicate character and its count
+    String printDuplicateCout = "i love my job to much";
+    Map<Character,Long> sepCharCount = printDuplicateCout.chars().mapToObj(x->(char)x).filter(x->x!=' ').collect(Collectors.groupingBy(x->x,Collectors.counting()))
+            .entrySet().stream().filter(x->x.getValue()>1).collect(Collectors.toMap(x->x.getKey(),x->x.getValue()));
+    sepCharCount.forEach((k, v) -> System.out.println(k + " → " + v));
 
 
 
