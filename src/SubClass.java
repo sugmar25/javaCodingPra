@@ -1,6 +1,5 @@
-import java.util.HashSet;
-import java.util.Map;
-import java.util.Set;
+import java.util.*;
+import java.util.function.Consumer;
 import java.util.stream.Collectors;
 
 //example for constructor class
@@ -57,6 +56,9 @@ public class SubClass {
         //IO.println(SecondGame);
         printDuplicateChar();
 
+        List<Integer> printNumbers = Arrays.asList(1,2,4,67,8,7,4,3,9);
+        printNumbers.forEach(x->System.out.print(x));
+
     }
 
     public static void printDuplicateChar() {
@@ -72,6 +74,7 @@ public class SubClass {
     }
 
     //Lamda expression
+
 
 
 
