@@ -1,6 +1,7 @@
 import java.util.*;
 import java.util.function.Consumer;
 import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 //example for constructor class
 public class SubClass {
@@ -70,6 +71,11 @@ public class SubClass {
                 .entrySet().stream().filter(x -> x.getValue() > 1)
                 .collect(Collectors.toMap(x -> x.getKey(), x -> x.getValue()));
         System.out.println(getDuplicateChar);
+
+        List<String> names = Arrays.asList("Sugumar","Abi","Dhrithi");
+        names.stream().collect(Collectors.toMap(a->a, String::length));
+        //namesChar.forEach(System.out::println);
+
         
     }
 

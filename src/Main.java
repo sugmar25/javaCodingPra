@@ -78,10 +78,6 @@ void main() {
             .entrySet().stream().filter(x->x.getValue()>1).collect(Collectors.toMap(x->x.getKey(),x->x.getValue()));
     sepCharCount.forEach((k, v) -> System.out.println(k + " → " + v));
 
-
-
-
-
 }
 
     public Integer sumOfAllNumbers() {
