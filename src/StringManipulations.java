@@ -158,11 +158,9 @@ public class StringManipulations {
             max =Math.max(max,right-left+1);
         }
         System.out.println(max);
-        Map<Character,Object> printDuplicate =str.chars().mapToObj(c->(char)c).collect(Collectors.groupingBy(c->c,Collectors.counting())).entrySet().stream()
-                .filter(e->e.getValue()>1).collect(Collectors.toMap(Map.Entry::getKey,Map.Entry::getValue));
+        Map<Character,Object> duplicate= str.chars().mapToObj(c->(char)c).collect(Collectors.groupingBy(c->c,Collectors.counting())).entrySet().stream()
+                        .filter(c->c.getValue()>1).collect(Collectors.toMap(Map.Entry::getKey,Map.Entry::getValue));
 
-        System.out.println(printDuplicate);
-
-        str.chars().mapToObj(c->String.valueOf((char)c));
+        System.out.println(duplicate);
     }
 }
