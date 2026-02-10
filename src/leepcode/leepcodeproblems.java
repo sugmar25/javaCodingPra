@@ -4,7 +4,7 @@ public class leepcodeproblems {
     //https://leetcode.com/problems/string-to-integer-atoi/description/?envType=problem-list-v2&envId=string
 
     public static void main(String [] args){
-        System.out.println(myAtoi("   -42"));
+        System.out.println(myAtoi("   -042"));
     }
     public static int myAtoi(String s){
         int i=0;
