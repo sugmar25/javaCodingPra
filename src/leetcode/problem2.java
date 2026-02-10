@@ -1,7 +1,4 @@
-package leepcode;
-
-import java.util.Comparator;
-import java.util.stream.IntStream;
+package leetcode;
 
 /****7. Reverse Integer
 Medium

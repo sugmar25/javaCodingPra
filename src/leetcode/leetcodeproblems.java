@@ -1,6 +1,6 @@
-package leepcode;
+package leetcode;
 
-public class leepcodeproblems {
+public class leetcodeproblems {
     //https://leetcode.com/problems/string-to-integer-atoi/description/?envType=problem-list-v2&envId=string
 
     public static void main(String [] args){
